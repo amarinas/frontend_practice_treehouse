@@ -127,6 +127,14 @@ a {
 }
 
 
-
+.feat-img {
+  width: 300px;
+  float: left;
+  margin-top: 5px;
+  margin-right:25px;
+  margin-bottom: 25px;
+  padding:10px;
+  border: solid 1px #d9e4ea;
+}
 
 }
