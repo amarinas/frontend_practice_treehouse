@@ -24,8 +24,13 @@ a {
 }
 
 h2,
-h3 {
+h3,
+h4 {
 	margin-top: 0;
+}
+
+h4 {
+	margin-bottom: .4em;
 }
 
 a {
@@ -34,6 +39,23 @@ a {
 
 img {
 	max-width: 100%;
+}
+
+figure {
+	margin: 0;
+	line-height: 0;
+	position: relative;
+}
+
+figcaption {
+	font-size: .9em;
+	line-height: 1.5;
+	color: #fff;
+	padding: 1em;
+	background: rgba(19,43,102, .85);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 /* =================================
@@ -47,51 +69,49 @@ img {
 	margin: 0;
 }
 
-.main-nav{
+.main-nav {
 	margin-top: 5px;
-
-
 }
 
-.name a,
-.main-nav a {
-	text-align: center;
-	display: block;
-	padding: 10px 15px;
-}
+	.name a,
+	.main-nav a {
+		display: block;
+		text-align: center;
+		padding: 10px 15px;
+	}
 
-.main-nav a {
-	font-size: .95em;
-	color: #3acec2;
-	text-transform: uppercase;
-}
+	.main-nav a {
+		font-size: .95em;
+		color: #3acec2;
+		text-transform: uppercase;
+	}
 
-.main-nav a:hover {
-	color: #093a58;
-}
+	.main-nav a:hover {
+		color: #093a58;
+	}
 
 /* ---- Layout Containers ---- */
 
-.main-header{
+.main-header {
 	padding-top: .5em;
 	padding-bottom: .5em;
-
-}
-
-.col {
-	padding-right: 1em;
-	padding-left: 1em;
 }
 
 .banner,
 .main-footer {
 	text-align: center;
-	padding: 3.2em 0;
 }
 
 .banner {
 	color: #fff;
 	background: #3acec2;
+	padding: 3.2em 0;
+	margin-bottom: 60px;
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
 }
 
 .main-footer {
@@ -110,6 +130,13 @@ img {
 	margin-bottom: 0;
 }
 
+.icon-location {
+	width: 35px;
+	position: absolute;
+	top: -15px;
+	left: 0;
+}
+
 /* =================================
   Media Queries
 ==================================== */
@@ -119,13 +146,11 @@ img {
 	.container {
 		width: 90%;
 		margin: 0 auto;
-
 	}
 
 	.name,
 	.col {
 		float: left;
-
 	}
 
 	.primary,
@@ -137,15 +162,13 @@ img {
 		float: right;
 	}
 
-	.main-nav li{
+	.main-nav li {
 		display: inline-block;
 		margin-left: 15px;
-
 	}
 
 	.tagline {
 		font-size: 1.4em;
-
 	}
 
 	/* ---- Float clearfix ---- */
@@ -158,19 +181,20 @@ img {
 
 }
 
-@media(min-width: 1025px){
+@media (min-width: 1025px) {
 
 	.container {
 		width: 80%;
 		max-width: 1150px;
-
 	}
+
 	.primary {
 		width: 40%;
-
 	}
+
 	.secondary,
 	.tertiary {
 		width: 30%;
 	}
+
 }
