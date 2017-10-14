@@ -1,4 +1,4 @@
-/* ================================= 
+/* =================================
   Base Element Styles
 ==================================== */
 
@@ -36,7 +36,7 @@ img {
 	max-width: 100%;
 }
 
-/* ================================= 
+/* =================================
   Base Layout Styles
 ==================================== */
 
@@ -44,11 +44,20 @@ img {
 
 .name {
 	font-size: 1.25em;
+	margin: 0;
+}
+
+.main-nav{
+	margin-top: 5px;
+
+
 }
 
 .name a,
 .main-nav a {
 	text-align: center;
+	display: block;
+	padding: 10px 15px;
 }
 
 .main-nav a {
@@ -62,6 +71,23 @@ img {
 }
 
 /* ---- Layout Containers ---- */
+
+.main-header{
+	padding-top: .5em;
+	padding-b: .5em;
+
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+.banner,
+.main-footer {
+	text-align: center;
+	padding: 3.2em 0;
+}
 
 .banner {
 	color: #fff;
@@ -80,7 +106,12 @@ img {
 	width: 190px;
 }
 
-/* ================================= 
+.headline {
+
+	margin-bottom: 0;
+}
+
+/* =================================
   Media Queries
 ==================================== */
 
