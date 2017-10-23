@@ -20,9 +20,12 @@ let question;
 let answer;
 let response;
 let html;
+let correct = [];
+let wrong = [];
 
 function print(message){
-  document.write(message);
+var outputDiv=  document.getElementById('output');
+outputDiv.innerHTML = message;
 }
 
 // if (parseInt(answer1) === 4 ){
@@ -57,16 +60,33 @@ function print(message){
 //
 // }
 
+function buildList(arr){
+  var listHTML = '<ol>';
+  for (var i = 0; i < arr.length; i++) {
+    listHTML += '<li>' + arr[i] + '</li>';
+
+  }
+  listHTML += '</ol>';
+  return listHTML;
+
+}
+
 for (var i = 0; i < questions.length; i++) {
   question= questions[i][0];
-  answer= question[i][1];
+  answer= questions[i][1];
   response = prompt(question);
   response = parseInt(response);
   if (response === answer) {
     correctAnswer += 1;
-
+    correct.push(question);
+  }else{
+    wrong.push(question);
   }
 }
 
 html = "You got " + correctAnswer + " question(s) right.";
+html += '<h2> You got these questions correct: </h2>';
+html += buildList(correct);
+html += '<h2> You got these question wrong: </h2>';
+html += buildList(wrong);
 print(html);
