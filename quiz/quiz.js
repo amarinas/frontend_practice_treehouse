@@ -9,11 +9,28 @@
 // }
 
 
-let questions = [['How many wheels in a car?', 4],
-                ['How many wheels in a bike?', 2],
-                ['what color is the sky?', 'blue'],
-                ['how many legs do you have?', 2],
-                ['how many heart does doctor who has?', 2]];
+let questions = [
+  {
+    question: 'How many wheels in a car?',
+    answer: 4
+  },
+
+  {
+    question: 'How many wheels in a bike?',
+    answer: 2
+  },
+  {
+    question: 'what color is the sky?',
+    answer: 'blue'
+  },
+  {
+    question: 'how many legs do you have?',
+    answer: 2
+  },
+  {
+    question: 'how many heart does doctor who has?',
+    answer: 2
+  }];
 
 let correctAnswer =0;
 let question;
@@ -72,8 +89,8 @@ function buildList(arr){
 }
 
 for (var i = 0; i < questions.length; i++) {
-  question= questions[i][0];
-  answer= questions[i][1];
+  question= questions[i].question;
+  answer= questions[i].answer;
   response = prompt(question);
   response = parseInt(response);
   if (response === answer) {

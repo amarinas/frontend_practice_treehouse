@@ -16,3 +16,7 @@ message +=  '<p>I live in the  ' + person.country + '</p>';
 person.name = 'Rainbow';
 message +=  '<p>I wish my name was  ' + person.name + '</p>';
 print(message);
+
+for (var prop in person) {
+  console.log(prop, ': ', person[prop]);
+}
