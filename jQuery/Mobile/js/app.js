@@ -12,18 +12,24 @@ $("#menu a").each(function(){
   // create option
   var $option = $("<option></option>");
 
+//Deal with selected options depending on current page
+if ($anchor.parent().hasClass("selected")){
+  $option.prop("selected", true);
+}
   //options value is the href
+  $option.val($anchor.attr("href"));
   // option text is the text of links
   $option.text($anchor.text());
   // append option to select
-
   $select.append($option);
-})
-
+});
 
 //Create button to click to go to selects location
-//bink click to button
-   //go to selects locations
-//modify Css to hide links on small resolution and show button and select
-  //also hides select and button on larger resolution and show links
-//Deal with selected options depending on current page
+var $button = $("<button>Go</button>");
+$("#menu").append($button);
+//bind click to button
+$button.click(function(){
+  //go to selects locations
+  window.location = $select.val();
+
+});

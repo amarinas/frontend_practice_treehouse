@@ -64,3 +64,17 @@ p {
 	color: #777;
 }
 /** Start Coding Here **/
+/*modify Css to hide links on small resolution and show button and select
+  also hides select and button on larger resolution and show links*/
+@media (min-width: 320px) and (max-width: 568px){
+
+	#menu ul {
+		display: none;
+	}
+}
+
+@media (min-width: 568px){
+	#menu select, #menu button{
+		display: none;
+	}
+}
