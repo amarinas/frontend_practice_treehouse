@@ -24,11 +24,18 @@ if ($anchor.parent().hasClass("selected")){
   $select.append($option);
 });
 
-//Create button to click to go to selects location
-var $button = $("<button>Go</button>");
-$("#menu").append($button);
-//bind click to button
-$button.click(function(){
+// //Create button to click to go to selects location
+// var $button = $("<button>Go</button>");
+// $("#menu").append($button);
+// //bind click to button
+// $button.click(function(){
+//   //go to selects locations
+//   window.location = $select.val();
+//
+// });
+
+//change on select to go to selects location
+$select.change(function(){
   //go to selects locations
   window.location = $select.val();
 
