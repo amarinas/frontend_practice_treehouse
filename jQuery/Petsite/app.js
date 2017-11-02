@@ -8,7 +8,7 @@ $('.loc').hover(
 });
   //Add a pet to the page with user input
   $('#add-pet').on('click', function(){
-    
+
     // grab info from the form
     var $name = $('#pet-name');
     var $species = $('#pet-species');
@@ -24,8 +24,19 @@ $('.loc').hover(
     );
 
     //Attach the new element to the page
-
     $('#posted-pets').append($newPet);
 
+    //Reset field
+    $name.val("");
+    $species.val("Dog");
+    $notes.val("");
 
   });
+
+// puppy fade in
+$('img').css('display', 'none').fadeIn(1600);
+
+
+$('.card').on('click', function () {
+  $(this).toggleClass('selected');
+});
