@@ -26,7 +26,12 @@ $('.loc').hover(
     //Attach the new element to the page
     $('#posted-pets').append($newPet);
 
-    //Reset field
+    //make the X remove the contain
+    $('.close').on('click', function(){
+      $(this).parent().remove();
+    });
+
+    //Reset field after input has been added
     $name.val("");
     $species.val("Dog");
     $notes.val("");
