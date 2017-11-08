@@ -10,22 +10,41 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
   <body>
+  <!--Navbar  -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+
+
+    <a class="navbar-brand order-1 mr-0" href="https://www.teamtreehouse.com" target="_blank">Presented By Treehouse</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link " href="#home">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#about">Features</a>
+        <a class="nav-item nav-link" href="#speakers">Speakers</a>
+        <a class="nav-item nav-link " href="#schedule">Shecdules</a>
+      </div>
+    </div>
+  </div>
+  </nav>
     <!-- About  -->
       <div class="container pt-4">
     <div class="row">
-      <div class="col-lg col-xl-6">
+      <div class="col-lg order-lg-2">
         <h3 class="mb-4">About Full Stack Conf</h3>
-        <img class="img-fluid rounded" src="img/pdx.jpg" alt="Portland">
+        <img class="img-fluid rounded d-none d-sm-block" src="img/pdx.jpg" alt="Portland">
         <p>The beautiful city of Portland, Oregon will be the host city for Full Stack Conf!</p>
         <p>Explore the future of JavaScript with a lineup of industry professionals. Discover new techniques to advance your career as a web developer.</p>
       </div>
-      <div class="col-lg">
+      <div class="col-lg order-lg-1">
         <h3 class="mb-4">Expert Speakers</h3>
         <p>Our expert speaker lineup was just announced, so don't wait too long before grabbing your tickets!</p>
         <p>Want to meet the international JavaScript community and share skills with some of the world's top experts, hackers, and makers? Be the first to know what to expect for the future of JavaScript.</p>
         <p>Full Stack Conf is committed to being inclusive and welcoming for everyone. We look forward to another intensive day of learning and sharing.</p>
       </div>
-      <div class="col-lg">
+      <div class="col-lg order-lg-3">
         <h3 class="mb-4">What You'll Learn</h3>
         <ul>
           <li><strong>MongoDB</strong>: NoSQL database</li>
@@ -44,6 +63,24 @@
   <h1 class="display-4 text-center my-5 text-muted">Schedule</h1>
   [Conference bios go here]
    <!--Schedule  -->
+   <!-- signup form -->
+   <hr>
+   <div class="row py-4 text-muted">
+     <div class="col-md col-xl-5">
+       <p><strong>About Treehouse</strong></p>
+       <p>Treehouse brings affordable technology education to people everywhere to help them achieve their dreams and change the world.</p>
+     </div>
+     <div class="col-md col-xl-5 ml-auto">
+       <p><strong>Stay up-to-date on Full Stack Conf</strong></p>
+       <div class="input-group">
+         <input type="text" class="form-control" placeholder="Email">
+         <span class="input-group-btn">
+           <button class="btn btn-primary" type="button">Sign up</button>
+         </span>
+       </div>
+     </div>
+   </div>
+   <hr><!-- /signup form -->
     </div><!-- /container -->
 
 
