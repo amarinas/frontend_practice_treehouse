@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Nick Pettit | Designer</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Changa+One%7COpen+Sans:400,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/all.min.css">
+  
   </head>
   <body>
+
+
     <header>
       <a href="index.html" id="logo">
         <h1>Nick Pettit</h1>
@@ -31,14 +33,35 @@
       <section id="secondary">
         <h3>Contact Details</h3>
         <ul class="contact-info">
-          <li class="phone"><a href="tel:555-6425">555-6425</a></li>
-          <li class="mail"><a href="mailto:nick@example.com">nick@example.com</a></li>
-          <li class="twitter"><a href="http://twitter.com/intent/tweet?screen_name=nickrp">@nickrp</a></li>
+          <li >
+            <svg>
+              <use xlink:href="#phone" />
+            </svg>
+            <a href="tel:555-6425">555-6425</a>
+          </li>
+          <li >
+            <svg>
+              <use xlink:href="#mail" />
+            </svg>
+            <a href="mailto:nick@example.com">nick@example.com</a>
+          </li>
+          <li >
+            <svg>
+              <use xlink:href="#twitter" />
+            </svg>
+            <a href="http://twitter.com/intent/tweet?screen_name=nickrp">@nickrp</a>
+          </li>
         </ul>
       </section>
       <footer>
-        <a href="http://twitter.com/nickrp"><img src="img/twitter-wrap.png" alt="Twitter Logo" class="social-icon"></a>
-        <a href="http://facebook.com/nickpettit"><img src="img/facebook-wrap.png" alt="Facebook Logo" class="social-icon"></a>
+        <a href="http://twitter.com/nickrp">
+          <svg class="social-icon">
+            <use xlink:href="#twitter-wrap" />
+          </svg>
+        </a>
+        <a href="http://facebook.com/nickpettit">
+          <use xlink:href="#facebook-wrap" />
+        </a>
         <p>&copy; 2014 Nick Pettit.</p>
       </footer>
     </div>

@@ -156,25 +156,18 @@ PAGE: CONTACT
   font-size: 0.9em;
 }
 
-.contact-info a {
-  display: block;
-  min-height: 20px;
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  padding: 0 0 0 30px;
+
+.contact-info li{
   margin: 0 0 10px;
 }
 
-.contact-info li.phone a {
-  background-image: url('../img/phone.png');
-}
+.contact-info a {
+  padding: 0 0 0 10px;
 
-.contact-info li.mail a {
-  background-image: url('../img/mail.png');
 }
-
-.contact-info li.twitter a {
-  background-image: url('../img/twitter.png');
+.contact-info svg{
+  width: 14px;
+  height: 14px;
 }
 
 
@@ -220,5 +213,24 @@ nav a.selected, nav a:hover {
   color: #32673f;
 }
 
-@import url('custom-popup.css');
+/**********************************
+Magnific jQuery Plugin
+***********************************/
 
+/* padding-bottom and top for image */
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+
+a.magnific:focus {
+  outline: none;
+}
