@@ -5,19 +5,13 @@
   <link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/main.css">
   <title>AJAX with JavaScript</title>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script>
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function(){
-      if (xhr.readyState ===4){
-        document.getElementById('ajax').innerHTML = xhr.responseText;
-      }
-    };
-    xhr.open('GET','sidebar.html');
-    function sendAJAX(){
-      xhr.send();
-      document.getElementById('load').style.display = "none";
-    }
-    
+
+  function sendAJAX() {
+     $('#ajax').load('sidebar.html');
+     $('#load').hide();
+  }
   </script>
 </head>
 <body>
@@ -28,7 +22,7 @@
           <div class="heading">
             <h1>Bring on the AJAX</h1>
             <button id="load" onclick="sendAJAX()">Bring it!</button>
-            
+
           </div>
           <div id="ajax">
 
