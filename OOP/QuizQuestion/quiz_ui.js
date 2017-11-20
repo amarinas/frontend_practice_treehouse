@@ -1,22 +1,21 @@
 var QuizUi = {
   displayNext: function(){
     if (quiz.hasEnded()){
-      this.displayScore;
+      this.displayScore();
     }else{
       this.displayQuestion();
       this.displayChoices();
       this.displayProgress();
     }
   },
-  displayQuestion: funciton(){
+  displayQuestion: function(){
     this.populateIdWithHTML("question", quiz.getCurrentQuestion().text);
 
   },
   displayChoices: function(){
     var choices = quiz.getCurrentQuestion().choices;
-
     for (var i = 0; i < choices.length; i++) {
-      this.populateIdWithHTML("choices" + i, choices[i]);
+      this.populateIdWithHTML("choice" + i, choices[i]);
       this.guessHandler("guess", + i, choices[i]);
     }
   },
@@ -27,6 +26,11 @@ var QuizUi = {
   },
   populateIdWithHTML: function(id,text){
     var element = document.getElementById(id);
+    element.innerHTML = text;
+
+  },
+  guessHandler: function(id, guess){
+    var button = document.getElementById(id);
     button.onclick = function(){
       quiz.guess(guess);
       QuizUi.displayNext();
@@ -34,7 +38,7 @@ var QuizUi = {
   },
 
   displayProgress: function(){
-    var currentQuestionNumber = quiz. currentQuestionIndex +1;
+    var currentQuestionNumber = quiz.currentQuestionIndex +1;
     this.populateIdWithHTML("progress", "Question "+ currentQuestionNumber + " of " + quiz.questions.length);
   }
-}
+};

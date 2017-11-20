@@ -1,11 +1,11 @@
-fuction Quiz(questions){
+function Quiz(questions){
   this.score =0;
   this.questions = questions;
   this.currentQuestionIndex = 0;
 
 }
 
-Quiz.prototype.guess = fucntion (answer){
+Quiz.prototype.guess = function (answer){
   if(this.getCurrentQuestion().isCorrectAnswer(answer)){
     this.score++;
 
@@ -14,10 +14,10 @@ Quiz.prototype.guess = fucntion (answer){
 }
 
 
-Quiz.prototype.getCurrentQuestion = funciton() {
-  return this.question[this.currentQuestionIndex];
+Quiz.prototype.getCurrentQuestion = function() {
+  return this.questions[this.currentQuestionIndex];
 }
 
 Quiz.prototype.hasEnded = function(){
-  return this.currentQuestionIndex >= this.question.length;
+  return this.currentQuestionIndex >= this.questions.length;
 }

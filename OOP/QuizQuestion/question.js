@@ -5,6 +5,6 @@ function Question(text, choices, answer){
 }
 
 
-Questions.prototype.isCorrectAnswer = function(choice){
+Question.prototype.isCorrectAnswer = function(choice){
   return this.answer === choice;
 }
